@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/EstiloTexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="1dp"
+        android:text="Faça seu pedido!"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView6"
+        style="@style/EstiloTexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="327dp"
+        android:layout_marginBottom="8dp"
+        android:text="Quantidade"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkOnion"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextNome"
+        style="@android:style/Widget.Material.Light.EditText"
+        android:layout_width="404dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:autoText="true"
+        android:ems="10"
+        android:hint="Nome"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/checkBacon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:ignore="MissingConstraints" />
+
+    <CheckBox
+        android:id="@+id/checkBacon"
+        android:layout_width="401dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Bacon"
+        app:layout_constraintBottom_toTopOf="@+id/checkQueijo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNome"
+        tools:ignore="MissingConstraints" />
+
+    <CheckBox
+        android:id="@+id/checkQueijo"
+        android:layout_width="399dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="8dp"
+        android:text="Queijo"
+        app:layout_constraintBottom_toTopOf="@+id/checkOnion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBacon"
+        app:layout_constraintVertical_bias="0.51"
+        tools:ignore="MissingConstraints" />
+
+    <CheckBox
+        android:id="@+id/checkOnion"
+        android:layout_width="404dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Onion Rings"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkQueijo"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="51dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="41dp"
+        android:onClick="decrementar"
+        android:text="-"
+        android:textColor="@color/white"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toStartOf="@+id/editContador"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editContador"
+        android:layout_width="43dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button3"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="51dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="258dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="incrementar"
+        android:text="+"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="8sp"
+        app:iconPadding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editContador"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button4"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="401dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="8dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="pedido"
+        android:text="Fazer Pedido"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="14sp"
+        app:iconPadding="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textValorFinal"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textValorFinal"
+        style="@style/EstiloTexto"
+        android:layout_width="378dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="26dp"
+        android:text="R$ 0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResultado"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView7"
+        style="@style/EstiloTexto"
+        android:layout_width="193dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="210dp"
+        android:text="RESUMO DO PEDIDO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <TextView
+        android:id="@+id/textViewResultado"
+        android:layout_width="366dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="29dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="114dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hamburguer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
